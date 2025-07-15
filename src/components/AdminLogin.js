@@ -20,7 +20,7 @@ const AdminLogin = () => {
 
       if (res.status === 200) {
         // ✅ Save login state only for this tab
-        sessionStorage.setItem("isAdminLoggedIn", "true");
+        localStorage.setItem("isAdminLoggedIn", "true");
 
         alert("✅ Login successful");
         navigate("/admin/dashboard");
