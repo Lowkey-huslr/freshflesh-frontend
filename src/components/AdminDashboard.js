@@ -32,7 +32,7 @@ const AdminDashboard = () => {
   
   useEffect(() => { 
     
-    const isLoggedIn = sessionStorage.getItem("isAdminLoggedIn");
+    const isLoggedIn = localStorage.getItem("isAdminLoggedIn");
   if (!isLoggedIn) {
     navigate("/admin/login");
     return;
@@ -66,7 +66,7 @@ const AdminDashboard = () => {
   };
 
   const handleLogout = () => {
-    sessionStorage.removeItem("isAdminLoggedIn");
+    localStorage.removeItem("isAdminLoggedIn");
     navigate("/");
   };
 
